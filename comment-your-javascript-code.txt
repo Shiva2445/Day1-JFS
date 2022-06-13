@@ -1,0 +1,3 @@
+//shiva;
+/*There are two ways to write comments in JavaScript*/
+
