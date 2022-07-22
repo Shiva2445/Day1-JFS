@@ -19,13 +19,25 @@
         let x = document.getElementById("edu").value
         let y = eval(x)
         document.getElementById("edu").value = y
+        wrong();
+    }
+    function wrong(){
+        try{
+            edu.value=eval(edu.value);
         }
-
+        catch{
+            alert("wrong input");
+            document.getElementById("edu").value="";
+        }
+    }
         function clr()
         {
         document.getElementById("edu").value = ""
         }
+        
         </script>
+        
+    
     <table class="center" border="1">
     <tr>
     <td colspan="3"><input type="text" id="edu"/></td>
@@ -58,7 +70,8 @@
     <td><input type="button" value="." onclick="dis('.')"/> </td>
     <td><input type="button" value="/" onclick="dis('/')"/> </td>
     </tr>
-
+    <form><input type="number" oninvalid="alert('You must fill out the form!')" name="fname" required>
+</form>
     </table>
     </body>
     </Html>

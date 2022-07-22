@@ -1,0 +1,37 @@
+<html>
+<body>
+<form>
+<input id="box1" type="text" placeholder="To-do" onkeyup="state(this)" />
+<br>
+<br>
+
+<input id="box2" type="time" placeholder="Timings" disabled="disabled"/>
+<br>
+<br>
+
+<input id="box3" type="button" value="Submit" disabled="disabled" onclick="adding()"/>
+<input id="sum"/>
+</form>
+
+<script>
+function state(box1){
+    var box2=document.getElementById("box2");
+    var box3=document.getElementById("box3");
+
+   if(box1.value.trim() != ""){
+   box2.disabled=false;
+   box3.disabled=false;
+    } else {
+    box2.disabled=true;
+    box3.disabled=true;
+    
+    }};
+    function adding(){
+        var n1=document.getElementById("box1").value;
+        var n2=document.getElementById("box2").value;
+        var n3=document.getElementById("sum").value=n1+n2;
+alert(n3);
+    }
+</script>
+</body>
+</html>
